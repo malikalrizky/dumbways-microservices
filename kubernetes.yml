@@ -16,7 +16,9 @@ spec:
       - name: todo-profile
         image: suganda/todo-profile
         ports:
-        - containerPort: 80
+        - containerPort: 5001
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]
 
 ---
 apiVersion: apps/v1
@@ -37,7 +39,9 @@ spec:
       - name: todo-services
         image: suganda/todo-services
         ports:
-        - containerPort: 80
+        - containerPort: 4000
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]
         
 ---
 apiVersion: apps/v1
@@ -58,7 +62,9 @@ spec:
       - name: todo-skill
         image: suganda/todo-skill
         ports:
-        - containerPort: 80
+        - containerPort: 5000
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -78,7 +84,9 @@ spec:
       - name: todo-todo
         image: suganda/todo-todo
         ports:
-        - containerPort: 80
+        - containerPort: 5002
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -98,7 +106,9 @@ spec:
       - name: todo-user
         image: suganda/todo-user
         ports:
-        - containerPort: 80
+        - containerPort: 7000
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do echo hello; sleep 10;done"]
 ---
 apiVersion: apps/v1
 kind: Deployment
