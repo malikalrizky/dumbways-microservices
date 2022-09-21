@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todo-profile
-        image: suganda/todo-profile
+        image: malikalrk/todo-profile
         ports:
         - containerPort: 5001
         command: ["/bin/sh"]
@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: todo-services
-        image: suganda/todo-services
+        image: malikalrk/todo-services
         ports:
         - containerPort: 4000
         command: ["/bin/sh"]
@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
       - name: todo-skill
-        image: suganda/todo-skill
+        image: malikalrk/todo-skill
         ports:
         - containerPort: 5000
         command: ["/bin/sh"]
@@ -82,7 +82,7 @@ spec:
     spec:
       containers:
       - name: todo-todo
-        image: suganda/todo-todo
+        image: malikalrk/todo-todo
         ports:
         - containerPort: 5002
         command: ["/bin/sh"]
@@ -104,7 +104,7 @@ spec:
     spec:
       containers:
       - name: todo-user
-        image: suganda/todo-user
+        image: malikalrk/todo-user
         ports:
         - containerPort: 7000
         command: ["/bin/sh"]
